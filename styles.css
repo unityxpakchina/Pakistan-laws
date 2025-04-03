@@ -45,3 +45,85 @@ footer {
     text-align: center;
     padding: 10px;
 }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e;  /* Dark theme background */
+    color: #f0f0f0;  /* Light text for readability */
+}
+
+/* Header */
+header {
+    background-color: #28a745;  /* Green background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Header Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;  /* Highlight color on hover */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Content Animation */
+@keyframes slideIn {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Links */
+a {
+    color: #28a745;  /* Green link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffcc00;  /* Highlight on hover */
+        }
