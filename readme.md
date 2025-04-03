@@ -24,10 +24,4 @@ Visit: **https://unityxpakchina.github.io/pakistan-laws/**.
 3. Read legal details.  
 
 ### **Contribute**  
-If you want to contribute, feel free to fork this repository and suggest improvements!  
-
----
-
-5. Scroll down and click **Commit new file**.  
-
-Your `README.md` file is now created! Let me know if you want any modifications.
+If you want to contribute, feel free to fork this repository and suggest improvements 
