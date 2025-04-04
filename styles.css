@@ -1,139 +1,135 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #2e2e2e;  /* Dark theme background */
-    color: #f0f0f0;  /* Light text for readability */
-    line-height: 1.6;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
 }
 
 /* Header */
 header {
-    background-color: #28a745;  /* Green background */
+    background-color: green;
     color: white;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
-    animation: fadeIn 2s ease-in-out;
 }
 
-/* Header Animation */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
-    margin: 0;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+    display: inline;
+    margin: 10px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: #ffcc00;
-    color: #333;
+/* Image Overlay Cards */
+.image-overlay {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Main Content */
-main {
-    padding: 30px 15px;
+.card-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,128,0,0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s ease;
     text-align: center;
-    animation: slideIn 1s ease-in-out;
+    padding: 20px;
 }
 
-/* Content Animation */
-@keyframes slideIn {
-    0% { transform: translateY(100px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+.image-overlay:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #fff;
+    color: green;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.overlay-btn:hover {
+    background-color: #e0ffe0;
+}
+
+/* Search Section */
+#search {
+    margin: 20px;
+}
+
+#search-box {
+    padding: 8px;
+    width: 70%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: darkgreen;
 }
 
 /* Footer */
 footer {
-    margin-top: 20px;
-    background-color: #333;
+    background-color: green;
     color: white;
-    text-align: center;
-    padding: 15px;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-/* Links */
-a {
-    color: #28a745;  /* Green link color */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #ffcc00;  /* Highlight on hover */
-}
-
-/* Responsive Design: Mobile-Friendly */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 16px;  /* Slightly larger font size for mobile */
-    }
-
-    header {
-        padding: 15px;  /* Adjust padding for smaller screens */
-    }
-
-    nav ul {
-        padding: 10px;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    nav ul li a {
-        font-size: 16px;  /* Increase font size for mobile */
-        padding: 10px;
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    footer {
-        font-size: 14px;  /* Smaller font size for footer */
-    }
-}
-
-/* Further Responsiveness for Small Screens */
-@media screen and (max-width: 480px) {
-    header {
-        font-size: 18px;  /* Adjust header font size for very small screens */
-    }
-
-    nav ul li a {
-        font-size: 14px;  /* Adjust navigation link font size */
-    }
-
-    main {
-        padding: 15px;
-        font-size: 15px;  /* Adjust text size */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-overlay {
+        max-width: 90%;
     }
 }
