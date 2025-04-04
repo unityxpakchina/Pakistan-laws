@@ -20,3 +20,14 @@ function scrollToTop() {
 function toggleDarkMode() {
     document.body.classList.toggle("dark-theme");
 }
+function searchLaw(section) {
+    const input = document.getElementById(`search-${section}`).value.toLowerCase();
+    const content = document.getElementById(`${section}-content`);
+    const text = content.innerText.toLowerCase();
+
+    if (text.includes(input)) {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
+}
