@@ -31,3 +31,22 @@ function searchLaw(section) {
         content.style.display = "none";
     }
 }
+// Dark Mode Toggle
+document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
+
+// Search Function (Simple Filtering)
+function searchLaws() {
+    let searchQuery = document.getElementById('search-box').value.toLowerCase();
+    let sections = document.querySelectorAll('.card');
+
+    sections.forEach(section => {
+        let text = section.textContent.toLowerCase();
+        if (text.includes(searchQuery)) {
+            section.style.display = "block";
+        } else {
+            section.style.display = "none";
+        }
+    });
+}
