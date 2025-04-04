@@ -50,3 +50,14 @@ function searchLaws() {
         }
     });
 }
+function loadLawContent(file) {
+    fetch(file)
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('law-content').innerHTML = `<pre>${data}</pre>`;
+    })
+    .catch(error => {
+        document.getElementById('law-content').innerHTML = "<p>Error loading content.</p>";
+        console.error(error);
+    });
+}
